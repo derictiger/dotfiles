@@ -1,5 +1,8 @@
 " Eric Geiger vimrc
 " vim-plug {{{
+" to download vim-plug do this in terminal:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'drewtempelmeyer/palenight.vim'
