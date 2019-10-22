@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'vim-latex/vim-latex'
+Plug 'lervag/vimtex'
 call plug#end()
 " }}}
 " Colors {{{
@@ -26,6 +26,7 @@ filetype indent on "load filetype-specific indent files
 set wildmenu " visual autocomplete
 set lazyredraw " redraw only when we need to
 set showmatch " highlight matching [{()}]
+set spell spelllang=en
 " }}}
 " Searching {{{
 set incsearch
@@ -37,6 +38,7 @@ nnoremap <leader><space> :nohlsearch<cr>
 set foldmethod=indent " fold based on indent level
 set foldnestmax=10 " max 10 depth
 set foldenable " enable folding
+set foldlevelstart=10
 "space open/closes folds
 nnoremap <space> za
 " }}}
@@ -51,7 +53,7 @@ nnoremap <leader>e $
 nnoremap gV '[v']
 " }}}
 " Leader shortcuts {{{
-" jk is escape
+" kj  is escape
 inoremap kj <esc>
 " toggle gundo
 nnoremap <leader>u :GundoToggle<cr>
@@ -61,6 +63,10 @@ nnoremap <leader>ez :vsp ~/.zshrc<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 "save session
 nnoremap <leader>s :mksession<cr>
+" }}}
+" latex-stuff {{{
+" PDF display rule
+let g:vimtex_view_method = 'skim'
 " }}}
 " look into ag.vim
 " look into CtrlP
