@@ -8,13 +8,14 @@ Plug 'tpope/vim-sensible'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
+Plug 'rafi/awesome-vim-colorschemes'
 call plug#end()
 " }}}
 " Colors {{{
 syntax enable " enable syntax processing
 set background=dark
-colorscheme palenight
-let g:lightline = { 'colorscheme': 'palenight' }
+colorscheme solarized8
+" let g:lightline = { 'colorscheme': 'desert' }
 " }}}
 " Spaces and Tabs {{{
 filetype plugin on
@@ -66,10 +67,6 @@ nnoremap <leader>ez :vsp ~/.zshrc<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 "save session
 nnoremap <leader>s :mksession<cr>
-" }}}
-" latex-stuff {{{
-" PDF display rule
-let g:vimtex_view_method = 'skim'
 " }}}
 " look into ag.vim
 " look into CtrlP
